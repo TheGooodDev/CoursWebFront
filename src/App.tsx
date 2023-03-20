@@ -13,10 +13,10 @@ function App() {
     <div className="App">
       <div className="card">
         <div className='flex'>
-          <ShowCount counter={count} />
-          <ShowCount counter={count} />
-          <button onClick={() => setCount(count + 1)}>
-      </button>
+          <ShowCount counter={count}>
+            <Count/>
+            <Count/>
+          </ShowCount>
         </div>
       </div>
     </div>

@@ -1,11 +1,20 @@
-import { useState } from 'react'
-import ShowCount from './showCount';
+import { useEffect, useMemo, useState } from 'react'
 
-export default function Count() {
+interface ParentCount{
+    countParent: number
+}
+
+export default function Count({countParent}: ParentCount) {
     const [count, setCount] = useState(0);
+    const totalCount = useMemo(
+        () => count+countParent,
+        [count, countParent]
+      );
 
     return (
+        
     <button onClick={() => setCount(count + 1)}>
-      </button>
+        count is {totalCount}
+    </button>
     )
   }
