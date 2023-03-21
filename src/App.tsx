@@ -5,8 +5,8 @@ import './App.css'
 import SimonButton from './simonButton';
 
 
-const SHOW_TIME = 850
-const PAUSE_TIME = 150
+const SHOW_TIME = 1000
+const PAUSE_TIME = 500
 
 const classColor = ["green", "red", "blue", "yellow"]
 
@@ -64,8 +64,10 @@ function App() {
         setPlayerSequel([...playerSequel, color])
         if (index + 1 >= simonSequel.length) {
           setSimonSequel([...simonSequel, getRandomColor()])
-          setTurn(false)
-          setIndex(0)
+          setTimeout(()=>{
+            setTurn(false)
+            setIndex(0)
+          },PAUSE_TIME)
         } else {
           setTimeout(()=>{
             setLight(false)
