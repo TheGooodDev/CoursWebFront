@@ -45,3 +45,36 @@
 .read-the-docs {
   color: #888;
 }
+
+.divSimon{
+  display: grid;
+  grid-template-columns: repeat(2,110px);
+}
+
+.divSimon button{
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+
+}
+
+.green{
+  background-color: green;
+  opacity: 50%;
+}
+.red{
+  background-color: red;
+  opacity: 50%;
+}
+.blue{
+  background-color: blue;
+  opacity: 50%;
+}
+.yellow{
+  background-color: yellow;
+  opacity: 50%;
+}
+
+.active{
+  opacity: 100%;
+}
