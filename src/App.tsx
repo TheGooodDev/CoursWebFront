@@ -74,7 +74,8 @@ function App() {
         }
       } else {
         setLight(false)
-        console.log("fail")
+        window.alert("Game is over !  You scored " + (simonSequel.length))
+        reset()
       }
     }
   }
@@ -96,16 +97,21 @@ function App() {
         Start
       </button>
       <button onClick={() => {
-        setSimonSequel(new Array<string>)
-        setPlayerSequel(new Array<string>)
-        setLight(false)
-        setIndex(0)
-        setTurn(true)
+        reset()
       }}>
         Reset
       </button>
+      
     </div>
   )
+
+  function reset(){
+    setSimonSequel(new Array<string>)
+    setPlayerSequel(new Array<string>)
+    setLight(false)
+    setIndex(0)
+    setTurn(true)
+  }
 }
 
 
