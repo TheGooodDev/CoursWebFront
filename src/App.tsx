@@ -5,8 +5,8 @@ import './App.css'
 import SimonButton from './simonButton';
 
 
-const SHOW_TIME = 1000
-const PAUSE_TIME = 500
+const SHOW_TIME = 850
+const PAUSE_TIME = 150
 
 const classColor = ["green", "red", "blue", "yellow"]
 
